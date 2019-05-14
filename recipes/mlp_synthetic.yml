@@ -1,0 +1,27 @@
+general:
+  name:  # <name:str> experiment name
+  gpu: -1  # <-g,--gpu:int> GPU ID (negative value indicates CPU)
+  test: false  # set tiny datasets for quick tests
+  num_experiments: 5
+  noplot: false
+dataset:
+  type: synthetic  # <--dataset:['synthetic', 'mnist', 'cifar100']>
+  depth: 8
+  dataset_randomness: 0.1
+loss:
+  beta: 1.0
+  k: 1
+training:
+  iteration: 1200  # number of iterations to learn
+  batch_size: 255
+  early_stopping: false
+  warm_up: -1  # number of iterations for warm-up penalty term
+optimizer:
+  type: adam  # <--optimizer:['adam', 'msgd', 'adagrad']> optimizer type
+  lr: 1e-3  # learning rate
+model:
+  p_x: bernoulli  # <:['normal', 'bernoulli']>
+  p_z: euclid  # <:['euclid', 'nagano', 'nagano-unit', 'ovinnikov', 'mathieu']>
+  type: mlp  # <--model-type:['mlp', 'cnn']> model type
+  n_hidden: 100
+  n_latent: 2

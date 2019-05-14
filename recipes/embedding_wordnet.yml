@@ -1,0 +1,29 @@
+general:
+  name:  # <name:str> experiment name
+  gpu: -1  # <-g,--gpu:int> GPU ID (negative value indicates CPU)
+  test: false  # set tiny datasets for quick tests
+  num_experiments: 3
+  noplot: false
+dataset:
+  type: wordnet  # <--dataset:['mammal', 'wordnet']>
+  num_negatives: 1  # number of negative samples
+  symmetrize: false
+loss:
+  k: 50  # number of MC samples
+  bound: 37.0  # bound for objective function
+training:
+  iteration: 744000  # number of iterations to learn
+  batch_size: 1000
+  burnin_step: 37150  # number of iterations for burnin
+  c: 38.0  # multiplier for burnin step
+optimizer:
+  type: adagrad  # <--optimizer:['adam', 'msgd', 'adagrad']> optimizer type
+  lr: 0.6  # learning rate
+model:
+  p_z: euclid  # <:['euclid', 'nagano', 'euclid-unit', 'nagano-unit']>
+  type: embedding  # <--model-type:['embedding']> model type
+  n_latent: 5
+  initial_scale: 0.01
+  sigma_min: 0.13  # minimum value of sigma
+  sigma_max: 1.55  # maximum value of sigma
+  mu_max: 4.3  # maximum norm of mu
