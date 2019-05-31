@@ -19,7 +19,7 @@ optimizer:
   lr: 1e-3  # learning rate
 model:
   p_x: bernoulli  # <:['normal', 'bernoulli']>
-  p_z: euclid  # <:['euclid', 'nagano', 'nagano-unit', 'ovinnikov', 'mathieu']>
+  p_z: euclid  # <:['euclid', 'nagano', 'nagano-unit']>
   type: mlp  # <--model-type:['mlp', 'cnn']> model type
   n_hidden: 500
   n_latent: 20
