@@ -3,6 +3,8 @@ hyperbolic_wrapped_distribution
 
 Code for reproducing results in ["A Wrapped Normal Distribution on Hyperbolic Space for Gradient-Based Learning"](https://arxiv.org/abs/1902.02992).
 
+![Example of log density](/images/density_example.png)
+
 ## Setup Environment with Docker
 
 ```sh
